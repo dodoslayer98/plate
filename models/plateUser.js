@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 
 const reviewSchema = new Schema ({
+    restaurantName: String,
     foodItem: String, 
     content: String,
     rating: {
