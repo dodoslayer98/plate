@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Plate</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <a href="/home">Go Home</a>
+
+    <h2><%= restaurantView.name %></h1>
+    <h3>Address: <%= restaurantView.address %></h3>
+    <h3>Phone: <%= restaurantView.phone %></h3>
+
+    <h3><a href='/reviews/new/<%=restaurantView.id%>'>Add Review</a></h3>
+
+    
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Plate</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <a href="/home">Go Home</a>
+
+    <% restaurants.forEach(function(rest){%>
+        <a href="/home/restaurants/<%=rest.id%>"><%= rest.name %> </a>
+    <% }) %>
+  </body>
+</html>

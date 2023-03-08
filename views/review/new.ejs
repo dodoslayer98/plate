@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Add Review</h1>
+
+    <!-- <div class="topnav">
+      <a class="active" href="/home">Home</a>
+      <input type="text" placeholder="Search..">
+    </div> -->
+
+    <form action="/reviews" method="POST">
+      
+    <label> Menu Item :
+      <select name="foodItem" required>
+        <option value=''>Select Menu Item...</option>
+        <%restaurant.menu.forEach(function(item){%>
+        <option value=<%= item %>><%= item %></option>
+        <% }) %>
+      </select>
+    </label>
+      <label> Rating :
+        <select name="rating" required>
+          <option value=1>1</option>
+          <option value=2>2</option>
+          <option value=3>3</option>
+          <option value=4>4</option>
+          <option value=5>5</option>
+        </select>
+      </label>
+        <br>
+      <label> Review :
+        <textarea name="content" rows="4" cols="30" required></textarea>
+      </label>
+        <button type="submit" >Add Review</button>
+    </form>
+    
+    
+
+  </body>
+</html>
+ 
