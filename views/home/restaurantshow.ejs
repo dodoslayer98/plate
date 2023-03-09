@@ -15,7 +15,7 @@
 
     <h2>Your Reviews</h2>
     <% reviews.forEach(function(rev){ %>
-      <a href='/reviews/<%= rev._id %>'><h3><%=rev.foodItem%></h3></a>
+      <a href='/reviews/<%= rev._id%>/edit '><h3><%=rev.foodItem%></h3></a>
       <h4><%=rev.rating%>/5</h4>
       <p><%=rev.content%></p>
       <form action="/reviews/<%= rev._id %>?_method=DELETE" id="delete-review" method="POST">
