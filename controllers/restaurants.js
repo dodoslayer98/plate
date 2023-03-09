@@ -15,7 +15,6 @@ function index(req, res, next) {
 
 function show(req,res,next) {
     const userReviews = req.user.reviews.filter(review => review.restId == req.params.id )
-    console.log(userReviews)
     res.render('home/restaurantshow',{
         restaurantView:Restaurant.getOne(req.params.id),
         reviews:userReviews
