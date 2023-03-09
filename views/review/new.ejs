@@ -12,6 +12,8 @@
     </div> -->
 
     <form action="/reviews" method="POST">
+      <input type="number" name="restId" id='restaurant-id' value="<%= restaurant.id%>">
+      <br>
       <input type="text" name="restaurantName" id='restaurant-name' value="<%= restaurant.name%>">
       <br>
       <label> Menu Item :

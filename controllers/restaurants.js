@@ -7,9 +7,19 @@ module.exports = {
 }
 
 function index(req, res, next) {
+    const allReviews = PlateUser.find({},function(err,reviews){
+        console.log(allReviews)
+    })
     res.render('home/restaurants',{restaurants:Restaurant.getAll()} )
 }
 
 function show(req,res,next) {
-    res.render('home/restaurantshow',{restaurantView:Restaurant.getOne(req.params.id)})
+    const userReviews = req.user.reviews.filter(review => review.restId == req.params.id )
+    console.log(userReviews)
+    res.render('home/restaurantshow',{
+        restaurantView:Restaurant.getOne(req.params.id),
+        reviews:userReviews
+    })
 }
+
+

@@ -6,6 +6,7 @@ const reviewSchema = new Schema ({
     restaurantName: String,
     foodItem: String, 
     content: String,
+    restId: Number,
     rating: {
         type: Number, 
         min : 1,

@@ -5,11 +5,9 @@ const PlateUser = require('../models/plateUser')
 const reviewCtrl = require('../controllers/reviews')
 
 router.get('/reviews/new/:id',reviewCtrl.new)
-
 router.post('/reviews',reviewCtrl.addReview)
+router.delete('/')
 
 module.exports = router;
 
 
-
-// qcqADUwhB8vmWNL6

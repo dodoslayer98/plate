@@ -136,7 +136,7 @@ const restaurants = [
 
 module.exports = {
   getAll,
-  getOne
+  getOne,
 
 }
 
