@@ -8,7 +8,6 @@ module.exports = {
 
 function index(req, res, next) {
     const allReviews = PlateUser.find({},function(err,reviews){
-        console.log(allReviews)
     })
     res.render('home/restaurants',{restaurants:Restaurant.getAll()} )
 }

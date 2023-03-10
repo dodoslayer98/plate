@@ -23,64 +23,33 @@
     
 
 
-    <div class="container">
+    <div class="container" id="add-review">
       <div class="row">
-        <div class="col">
+        <div class="col-7">
           <h1>Edit Review</h1>
           <form action="/reviews/<%=review._id%>?_method=PUT" method="POST">
-            <input type="number" name="restId" id='restaurant-id' value="<%= review.restId%>">
+            <input type="number" name="restId" id='restaurant-id' value="<%= review.restId%>" readonly>
             <br>
-            <input type="text" name="name" id='restaurant-name' value="<%= review.restaurantName%>">
+            <label class="form-label" ></label>
+            <input type="text" name="name" id='restaurant-name' value="<%= review.restaurantName%>" readonly>
             <br>
-            <label> Menu Item :
-              <input type="text" name="foodItem" value="<%=review.foodItem%>">
+            <label class="form-label"> 
+              <input type="text" name="foodItem" class="form-control" value="<%=review.foodItem%>" readonly>
             </label>
             <br>
-              <label> Rating :
-                <input type="number" name="rating" value="<%=review.rating%>">
+              <label class="form-label">
+                <input type="number" name="rating" class="form-control" value="<%=review.rating%>">
               </label>
                 <br>
-            <label> Review :
-              <textarea name="content" rows="4" cols="30" required><%=review.content%></textarea>
+            <label> <h5>Text:</h5>
+              <textarea name="content" class="form-control" cols="70" required><%=review.content%></textarea>
             </label>
-              <button type="submit" >Update Review</button>
+              <button type="submit" class="btn btn-outline-dark">Update Review</button>
           </form>
         </div>
       </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-    
-
-    
-    <form action="/reviews/<%=review._id%>?_method=PUT" method="POST">
-      <input type="number" name="restId" id='restaurant-id' value="<%= review.restId%>" readonly>
-      <br>
-      <input type="text" name="name" id='restaurant-name' value="<%= review.restaurantName%>" readonly>
-      <br>
-      <label> Menu Item :
-        <input type="text" name="foodItem" value="<%=review.foodItem%>">
-      </label>
-      <br>
-        <label> Rating :
-          <input type="number" name="rating" value="<%=review.rating%>">
-        </label>
-          <br>
-      <label> Review :
-        <textarea name="content" rows="4" cols="30" required><%=review.content%></textarea>
-      </label>
-        <button type="submit" >Update Review</button>
-    </form>
-    
   </body>
 </html>
  
