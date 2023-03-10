@@ -1,5 +1,11 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -15,4 +21,20 @@ a {
 #restaurant-name {
   border: none;
   font-size: 24px;
+}
+
+
+#food-and-restaurants{
+  padding-top: 100px;
+}
+
+#restaurant-view{
+  padding-top: 50px;
+}
+#restaurant-view h2{
+  font-size: 50px;
+}
+
+#logo {
+  font-size: 75px;
 }

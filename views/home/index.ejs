@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Plate</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<%- include('../partials/header') %>
   <nav>
-    <h3>You're now logged in</h3>
+    <div class="row">
+      <h2>You're now logged in</h2>
     <ul>
       <li>
         <% if (user) { %>
@@ -20,7 +15,5 @@
   
   <!-- <a href="/reviews/new">Add Review</a> -->
   <a href="/home/restaurants">View All Restaurants</a>
-
-
   </body>
 </html>

@@ -1,17 +1,44 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Plate</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <a href="/home">Go Home</a>
+<%- include('../partials/header') %>
 
-    <h2><%= restaurantView.name %></h1>
-    <h3>Address: <%= restaurantView.address %></h3>
-    <h3>Phone: <%= restaurantView.phone %></h3>
+    <div class=" container ">
+      <div class="row text-center">
+        <div class="col my-auto">
+          <h1 id="logo">Plate</h1>
+        </div>
+      </div>
+      <div class="row text-center justify-content-between ">
+        <div class="col-1 my-auto">
+          <a href="/home">Go Home</a>
+        </div>
+
+        <div class="col-4 my-auto">
+          <input class="form-control" type="text" placeholder="Search">
+        </div>
+
+        <div class="col-1 my-auto">
+          <a href="/logout">Log Out</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="restaurant-view">
+      <div class="row">
+        <h2><%= restaurantView.name %></h1>
+        <h4>Address: <%= restaurantView.address %></h4>
+        <h5>Phone: <%= restaurantView.phone %></h5>
+      </div>
+    </div>
+
+
+    
 
     <h3><a href='/reviews/new/<%=restaurantView.id%>'>Add Review</a></h3>
+
+    <div class="container">
+      
+    </div>
+
+
 
     <h2>Your Reviews</h2>
     <% reviews.forEach(function(rev){ %>
