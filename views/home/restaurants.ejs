@@ -8,7 +8,7 @@
   </div>
   <div class="row text-center justify-content-between ">
     <div class="col-2 my-auto">
-      <a href="/home" class="text-dark"><h3>Go Home</h3></a>
+      <a href="/home/restaurants" class="text-dark"><h3>Go Home</h3></a>
     </div>
 
     <div class="col-4 my-auto">
@@ -24,27 +24,27 @@
     <div class="container" id="food-and-restaurants">
       <div class="row text-center justify-content-around">
         <div class="col-3">
-          <div class="card" style="width: 18rem;">
+          <div class="card" style="width: 22rem;">
             <div class="card-header">
-              Trending
+              <h4>Trending Plates</h4>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
+              <li class="list-group-item"><h5>Fried Chicken Sandwhich</h5></li>
+              <li class="list-group-item"><h5>Matcha Cheesecake</h5></li>
+              <li class="list-group-item"><h5>Cupcake</h5></li>
+              <li class="list-group-item"><h5>Shrimp Taco</h5></li>
+              <li class="list-group-item"><h5>Crispy Eggplant</h5></li>
             </ul>
           </div>
         </div>
         <div class="col-3">
-          <div class="card" style="width: 18rem;">
+          <div class="card" style="width: 22rem;">
             <div class="card-header">
-              Top Restaurants Near You
+              <h4>Top Restaurants Near You</h4>
             </div>
             <ul class="list-group list-group-flush">
               <% restaurants.forEach(function(rest){%>
-              <li class="list-group-item"><a href="/home/restaurants/<%=rest.id%>"><%= rest.name %> </a></li>
+              <li class="list-group-item"><a href="/home/restaurants/<%=rest.id%>" class="text-dark"><h5 ><%= rest.name %></h5> </a></li>
               <% }) %>
             </ul>
           </div>
