@@ -7,16 +7,16 @@
         </div>
       </div>
       <div class="row text-center justify-content-between ">
-        <div class="col-1 my-auto">
-          <a href="/home">Go Home</a>
+        <div class="col-2 my-auto">
+          <a href="/home" class="text-dark"><h3>Go Home</h3></a>
         </div>
 
         <div class="col-4 my-auto">
           <input class="form-control" type="text" placeholder="Search">
         </div>
 
-        <div class="col-1 my-auto">
-          <a href="/logout">Log Out</a>
+        <div class="col-2 my-auto">
+          <a href="/logout" class="text-dark"><h3>Log Out</h3></a>
         </div>
       </div>
     </div>
@@ -27,28 +27,28 @@
         <h4>Address: <%= restaurantView.address %></h4>
         <h5>Phone: <%= restaurantView.phone %></h5>
       </div>
+      <div class="row">
+        <h3><a href='/reviews/new/<%=restaurantView.id%>' class="text-dark">Add Review</a></h3>
+      </div>
     </div>
 
-
-    
-
-    <h3><a href='/reviews/new/<%=restaurantView.id%>'>Add Review</a></h3>
-
-    <div class="container">
-      
+    <div class="container" id="reviews">
+      <h2>Your Reviews</h2>
+      <% reviews.forEach(function(rev){ %>
+      <div class="card bg-light mb-3" style="width: 600px;">
+        <h3 class="card-header"><a href='/reviews/<%= rev._id%>/edit' class="text-dark"><%=rev.foodItem%></a></h3>
+        <div class="card-body">
+          <h4 class="card-title"><%=rev.rating%>/5</h4>
+          <%=rev.content%>
+        </div>
+        <div class="card-footer">
+          <form action="/reviews/<%= rev._id %>?_method=DELETE" id="delete-review" method="POST">
+            <button type="submit" class="btn btn-outline-dark">Delete</button> 
+          </form>
+        </div>
+      </div>
+      <% }) %>
     </div>
 
-
-
-    <h2>Your Reviews</h2>
-    <% reviews.forEach(function(rev){ %>
-      <a href='/reviews/<%= rev._id%>/edit '><h3><%=rev.foodItem%></h3></a>
-      <h4><%=rev.rating%>/5</h4>
-      <p><%=rev.content%></p>
-      <form action="/reviews/<%= rev._id %>?_method=DELETE" id="delete-review" method="POST">
-        <button type="submit">Delete</button> 
-      </form>
-  
-    <% }) %>
   </body>
 </html>

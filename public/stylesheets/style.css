@@ -28,7 +28,7 @@ a {
   padding-top: 100px;
 }
 
-#restaurant-view{
+#restaurant-view, #add-review {
   padding-top: 50px;
 }
 #restaurant-view h2{
@@ -37,4 +37,8 @@ a {
 
 #logo {
   font-size: 75px;
+}
+
+#reviews {
+  padding: 20px;
 }

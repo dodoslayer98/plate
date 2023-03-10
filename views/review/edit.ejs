@@ -1,20 +1,71 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>Add Review</h1>
+<%- include('../partials/header') %>
 
-    <!-- <div class="topnav">
-      <a class="active" href="/home">Home</a>
-      <input type="text" placeholder="Search..">
-    </div> -->
+    <div class=" container ">
+      <div class="row text-center">
+        <div class="col my-auto">
+          <h1 id="logo">Plate</h1>
+        </div>
+      </div>
+      <div class="row text-center justify-content-between ">
+        <div class="col-2 my-auto">
+          <a href="/home" class="text-dark"><h3>Go Home</h3></a>
+        </div>
 
+        <div class="col-4 my-auto">
+          <input class="form-control" type="text" placeholder="Search">
+        </div>
+
+        <div class="col-2 my-auto">
+          <a href="/logout" class="text-dark"><h3>Log Out</h3></a>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Edit Review</h1>
+          <form action="/reviews/<%=review._id%>?_method=PUT" method="POST">
+            <input type="number" name="restId" id='restaurant-id' value="<%= review.restId%>">
+            <br>
+            <input type="text" name="name" id='restaurant-name' value="<%= review.restaurantName%>">
+            <br>
+            <label> Menu Item :
+              <input type="text" name="foodItem" value="<%=review.foodItem%>">
+            </label>
+            <br>
+              <label> Rating :
+                <input type="number" name="rating" value="<%=review.rating%>">
+              </label>
+                <br>
+            <label> Review :
+              <textarea name="content" rows="4" cols="30" required><%=review.content%></textarea>
+            </label>
+              <button type="submit" >Update Review</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
     <form action="/reviews/<%=review._id%>?_method=PUT" method="POST">
-      <input type="number" name="restId" id='restaurant-id' value="<%= review.restId%>">
+      <input type="number" name="restId" id='restaurant-id' value="<%= review.restId%>" readonly>
       <br>
-      <input type="text" name="name" id='restaurant-name' value="<%= review.restaurantName%>">
+      <input type="text" name="name" id='restaurant-name' value="<%= review.restaurantName%>" readonly>
       <br>
       <label> Menu Item :
         <input type="text" name="foodItem" value="<%=review.foodItem%>">
